@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AppService } from './services/app.service';
+import { EagerModule } from './modules/eager/eager.module';
 
 @NgModule({
   declarations: [
@@ -10,9 +12,12 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    EagerModule
   ],
-  providers: [],
+  providers: [
+    // AppService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
